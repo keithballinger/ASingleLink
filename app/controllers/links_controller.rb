@@ -3,6 +3,7 @@ class LinksController < ApplicationController
   end
 
   def show
+    @link = Link.last
   end
 
 end

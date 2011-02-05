@@ -2,11 +2,12 @@ ASingleLink::Application.routes.draw do
   #get "link/create"
   #get "link/show"
   
-  resources :links, :only => :show 
+  match '/', :to => 'links#show'
+  #resources :links, :only => :show 
   
   resources :users
 
-match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/:provider/callback', :to => 'sessions#create'
 
 
   # The priority is based upon order of creation:
