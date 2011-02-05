@@ -1,4 +1,9 @@
 ASingleLink::Application.routes.draw do
+  #get "link/create"
+  #get "link/show"
+  
+  resources :links, :only => :show 
+  
   resources :users
 
 match '/auth/:provider/callback', :to => 'sessions#create'
