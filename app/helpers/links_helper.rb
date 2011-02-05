@@ -1,2 +1,2 @@
-module LinkHelper
+module LinksHelper
 end
