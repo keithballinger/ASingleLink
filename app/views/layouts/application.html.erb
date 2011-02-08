@@ -7,8 +7,31 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+	<div class="container">
+		<div class="span-24">
+			<div class="span-20">
+				<h1 class="loud">
+					A Single Link
+				</h1>
+				 <h4 class="alt">Reasonable discussions.</h4>
+			</div>
+			<div class="span-4 last">
+				<div class="box">
+					<% if @user.nil? %>
+						<a href="/auth/facebook">Login</a>
+					<% else %>
+						Hello <%= @user.first_name %> <%= @user.last_name %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<hr />
 <%= yield %>
-
+		<div class="span-4 last">
+			<div class="box">
+				right sidebar
+			</div>
+		</div>
+	</div>
 </body>
 </html>
