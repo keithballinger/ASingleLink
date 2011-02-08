@@ -8,7 +8,7 @@ ASingleLink::Application.routes.draw do
   resources :users
 
   match '/auth/:provider/callback', :to => 'sessions#create'
-
+  match '/sign_out', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

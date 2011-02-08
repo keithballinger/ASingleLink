@@ -20,7 +20,8 @@
 					<% if @user.nil? %>
 						<a href="/auth/facebook">Login</a>
 					<% else %>
-						Hello <%= @user.first_name %> <%= @user.last_name %>
+						Hello <%= @user.first_name %> <%= @user.last_name %><br/>
+						<a href="/sign_out">Logout</a>
 					<% end %>
 				</div>
 			</div>
