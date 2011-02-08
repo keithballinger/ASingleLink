@@ -1,4 +1,6 @@
 ASingleLink::Application.routes.draw do
+  resources :submitted_links
+
   #get "link/create"
   #get "link/show"
   
@@ -9,7 +11,8 @@ ASingleLink::Application.routes.draw do
 
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/sign_out', :to => 'sessions#destroy'
-
+  match '/submit_link', :to => 'links#new'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

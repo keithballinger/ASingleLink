@@ -14,6 +14,9 @@
 					A Single Link
 				</h1>
 				 <h4 class="alt">Reasonable discussions.</h4>
+				<% if ! @user.nil? %>
+					<a href="/submit_link">submit a link</a>
+				<% end %>
 			</div>
 			<div class="span-4 last">
 				<div class="box">

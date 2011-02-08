@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @submitted_link.url %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @submitted_link.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @submitted_link.description %>
+</p>
+
+<p>
+  <b>Thumbnail url:</b>
+  <%= @submitted_link.thumbnail_url %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @submitted_link.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_submitted_link_path(@submitted_link) %> |
+<%= link_to 'Back', submitted_links_path %>

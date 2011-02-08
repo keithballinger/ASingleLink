@@ -10,10 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110205193345) do
+ActiveRecord::Schema.define(:version => 20110208014523) do
 
   create_table "links", :force => true do |t|
     t.string   "url"
+    t.text     "description"
+    t.string   "thumbnail_url"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "submitted_links", :force => true do |t|
+    t.string   "url"
+    t.string   "title"
     t.text     "description"
     t.string   "thumbnail_url"
     t.integer  "user_id"

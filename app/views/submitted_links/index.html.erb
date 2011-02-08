@@ -1,0 +1,31 @@
+<h1>Listing submitted_links</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Thumbnail url</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @submitted_links.each do |submitted_link| %>
+  <tr>
+    <td><%= submitted_link.url %></td>
+    <td><%= submitted_link.title %></td>
+    <td><%= submitted_link.description %></td>
+    <td><%= submitted_link.thumbnail_url %></td>
+    <td><%= submitted_link.user %></td>
+    <td><%= link_to 'Show', submitted_link %></td>
+    <td><%= link_to 'Edit', edit_submitted_link_path(submitted_link) %></td>
+    <td><%= link_to 'Destroy', submitted_link, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Submitted link', new_submitted_link_path %>
