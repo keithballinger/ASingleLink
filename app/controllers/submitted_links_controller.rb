@@ -41,7 +41,8 @@ class SubmittedLinksController < ApplicationController
   # POST /submitted_links.xml
   def create
     @submitted_link = SubmittedLink.new(params[:submitted_link])
-
+    @submitted_link.user_id = current_user.id
+    
     respond_to do |format|
       if @submitted_link.save
         format.html { redirect_to(@submitted_link, :notice => 'Submitted link was successfully created.') }
