@@ -22,11 +22,5 @@ ASingleLink::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
-
-  #### taken from config/environments/production.rb - Chris
-  # Disable Rails's static asset server                                          a
-  # In production, Apache or nginx will already do this                          a
-  config.serve_static_assets = false
-
 end
 
