@@ -4,9 +4,10 @@ ASingleLink::Application.routes.draw do
   #get "link/create"
   #get "link/show"
   
-  match '/', :to => 'links#show'
-  #resources :links, :only => :show 
-  
+  resource :link, :only => :show
+  # match '/', :to => 'links#show', :method => :get
+  root :to => 'links#show'
+
   resources :users
 
   match '/auth/:provider/callback', :to => 'sessions#create'
