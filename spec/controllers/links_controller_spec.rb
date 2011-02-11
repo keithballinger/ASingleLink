@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe LinkController do
+describe LinksController do
 
   describe "GET 'create'" do
     it "should be successful" do
