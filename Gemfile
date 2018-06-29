@@ -28,6 +28,6 @@ gem 'omniauth'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 # group :development, :test do
-	gem 'capybara'
+	gem 'capybara', '>= 0.4.1.1'
 	gem 'rspec-rails'
 # end
