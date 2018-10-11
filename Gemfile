@@ -22,12 +22,12 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
-gem 'omniauth'
+gem 'omniauth', '>= 0.2.5'
 	
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 # group :development, :test do
-	gem 'capybara'
+	gem 'capybara', '>= 0.4.1.1'
 	gem 'rspec-rails'
 # end
