@@ -29,5 +29,5 @@ gem 'omniauth'
 # and rake tasks are available in development mode:
 # group :development, :test do
 	gem 'capybara'
-	gem 'rspec-rails'
+	gem 'rspec-rails', '>= 2.5.0'
 # end
